@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; 
+  background-color: #ffffff;
+    font-family: sans-serif; 
+}
+
+.flashcard {
+  position: relative;
+  display: flex;
+  width: 190mm;
+  height: 90mm;
+  margin: 0 auto;
+  border: 2mm solid black;
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  break-inside: avoid; 
+  page-break-inside: avoid;
+  margin-top: .5mm;
+  margin-bottom: .5mm;
+  z-index: 999999;
+  flex-direction: column;
+
+}
+
+
+.headers {
+  width: 100%;
+  text-align: center;
+  margin-top: 3mm;
+}
+.header,
+.subheader {
+  margin: 0;
+  
+}
+
+.header {
+  font-size: 28pt; 
+}
+
+.subheader {
+  font-size: 16pt; 
+}
+
+.divider {
+  height: 80%; 
+  width: 2mm;
+  background-color: black;
+  border-radius: 2mm;
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.content {
+  flex: 1;
+  justify-content: center;
+  padding: 5mm; 
+  font-size: 10pt;
+  line-height: 13pt;
+}
+
+.info-text {
+  text-align: justify;
+      display: block;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.info-text .info-line:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.info-text .info-line:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.continent-indicator {
+  position: absolute;
+  top: 5mm; 
+  left: 5mm; 
+  width: 7mm; 
+  height: 7mm; 
+  border-radius: 50%; 
+  background-color: transparent; 
+}
+
+.continent-indicator.North-America { background-color: green; }
+.continent-indicator.South-America { background-color: red; }
+.continent-indicator.Europe { background-color: royalblue; }
+.continent-indicator.Africa { background-color: #91693C; }
+.continent-indicator.Asia { background-color: #f7ce46; }
+.continent-indicator.Oceania { background-color: #db32a1; }
+
+.eu-indicator {
+  position: absolute;
+  top: 5mm; 
+  right: 5mm; 
+  width: 10mm; 
+  height: 10mm; 
+  border-radius: 50%; 
+  overflow: hidden;
+  background-color: white; 
+}
+
+.eu-indicator img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.logo {
+  max-width: 100%;
+  max-height: 80%; 
+  border: 1mm solid black;
+  object-fit: contain; 
+  margin-left: -0.9mm; /* Mistery misalignment*/ 
+  margin-top: -2.9mm; /* Mistery misalignment*/ 
+}
+
+.map-logo {
+  border: 1mm solid black;
+  max-width: 100%;
+  max-height: 100%; 
+  min-width: 100%;
+  border-radius: 4mm; 
+  object-fit: cover;
+  margin-left: -0.9mm; /* Mistery misalignment*/ 
+  margin-top: -2.9mm; /* Mistery misalignment*/ 
+}
+.page {
+  width: 210mm; /* width of A4 */
+  height: 297mm; /* height of A4 */
+  position: relative;
+  margin: 0 auto; 
+  box-sizing: border-box; 
+  page-break-after: always; /* force a new page for each .page container */
+  margin-top: 10mm;
+  margin-bottom: 10mm;
+}
+@media print {
+  .flashcard {
+    width: 190mm !important; 
+  }
+}
+

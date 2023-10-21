@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href={{ url_for('static', filename='styles.css')}}>
+</head>
+<body>
+  {% for country in countries|batch(3) %} <!-- Batch countries in groups of three -->
+    <div class="page">
+        {% for item in country %}
+        <div class="flashcard">
+            <div class="content-wrapper"> 
+            <div class="content left">
+                <!-- Left Content goes here -->
+                <img src="{{ url_for('static', filename='flags_svg/' + item.code + '.svg') }}" alt="flag" class="logo">
+            </div>
+            <div class="divider"></div>
+            <div class="content right">
+                <!-- Right Content goes here -->
+                <img src="{{ url_for('static', filename='maps_svg/' + item.name + '.svg') }}" alt="map" class="map-logo">
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  {% endfor %}
+</body>
+</html>
