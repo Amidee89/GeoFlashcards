@@ -66,9 +66,14 @@ def front_flashcards():
     return render_template('flashcard_front.html', countries=countries)
 
 @app.route('/back/')
-def flashcards():
+def back_flashcards():
     countries = load_countries_from_csv('data.csv')
     return render_template('flashcard_back.html', countries=countries)
+
+@app.route('/complete/')
+def all_flashcards():
+    countries = load_countries_from_csv('data.csv')
+    return render_template('flashcard_front_and_back.html', countries=countries)
 
 
 @app.route('/flashcard/<int:id>')
