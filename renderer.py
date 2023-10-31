@@ -45,7 +45,8 @@ def load_countries_from_csv(filepath):
                     "general_info": row['General info'],
                     "info_length": row['Len(info)'],
                     "name_length": row['Len(name)'],
-                    "languages": row['Languages']
+                    "languages": row['Languages'],
+                    "not_independent": row['Non-Independent']
                 })
 
             else:

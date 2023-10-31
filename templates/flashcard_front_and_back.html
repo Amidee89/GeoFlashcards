@@ -22,7 +22,7 @@
             </div>
             </div>
         </div>
-        {% endfor %}
+    {% endfor %}
     </div>
     <div class="page">
         {% for item in country %}
@@ -31,6 +31,11 @@
             {% if item.eu_member == "Yes" %}
                 <div class="eu-indicator">
                     <img src="/static/flags_svg/eu.svg" alt="EU Flag">
+                </div>
+            {% endif %}
+            {% if item.not_independent == "Yes" %}
+                <div class="eu-indicator">
+                    <img src="/static/flags_svg/exclamation.svg" alt="EU Flag">
                 </div>
             {% endif %}
             <div class="headers">

@@ -1,7 +1,12 @@
 # GeoFlashcards
- Printable PDF flashcards of all 193+2 countries with flag+map in the front and important data in the back.
+ 
+ Printable PDF flashcards of all 193 UN countries + 2 Observer states + 12 non independent regions, with flag+map in the front and important data in the back.
+ If you just want the PDFs, head to the releases: https://github.com/Amidee89/GeoFlashcards/releases
+ 
+ To render the pdf again:
  Run python renderer.py and go to http://127.0.0.1:5000/back/ or http://127.0.0.1:5000/front or http://127.0.0.1:5000/complete to re-render with the browser. 
- Only Chrome manages to cut off properly the pages, and you have to print odd pages only because it adds a white page after the break (the white page also makes macOS preview render random gray stuff in the flashcards)
+ Only Chrome manages to cut off properly the pages, and you have to print even pages only because it adds a white page after the break (the white page also makes macOS preview render random gray stuff in the flashcards).
+ Chrome also has different margins for the first page for some reason, so I added 3 extra lines to the CSV so all pages come out the same.
  
  Very very aggressive margins for printing on A4, you might need to scale back but be careful to so as it might screw up horizontal alignment between front and back. 
  
