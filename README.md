@@ -8,7 +8,7 @@
  Only Chrome manages to cut off properly the pages, and you have to print even pages only because it adds a white page after the break (the white page also makes macOS preview render random gray stuff in the flashcards).
  Chrome also has different margins for the first page for some reason, so I added 3 extra lines to the CSV so all pages come out the same.
  
- Very very aggressive margins for printing on A4, you might need to scale back but be careful to so as it might screw up horizontal alignment between front and back. 
+ Very very aggressive margins for printing on A4, you might need to scale back but be careful to do so as it might screw up horizontal alignment between front and back. 
  
  Data available here:
  https://docs.google.com/spreadsheets/d/1VADXC_0FcfDw9iflfB6tkSPC86Nlv_Qa7_EJE5hI5ps/edit?usp=sharing
