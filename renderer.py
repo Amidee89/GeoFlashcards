@@ -6,7 +6,7 @@ def load_countries_from_csv(filepath):
     with open(filepath, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for idx, row in enumerate(reader):
-            if idx < 200:
+            if idx < 250:
                 countries.append({
                     "code": row['Iso Code'],
                     "name": row['Country Name'],
