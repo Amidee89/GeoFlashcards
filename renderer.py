@@ -46,7 +46,8 @@ def load_countries_from_csv(filepath):
                     "info_length": row['Len(info)'],
                     "name_length": row['Len(name)'],
                     "languages": row['Languages'],
-                    "not_independent": row['Non-Independent']
+                    "not_independent": row['Non-Independent'],
+                    "flashcard_number": idx-2
                 })
 
             else:

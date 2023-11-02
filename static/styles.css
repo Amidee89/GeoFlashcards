@@ -126,6 +126,14 @@ body {
   object-fit: cover; 
 }
 
+.number {
+  position: absolute;
+  bottom: 4mm; 
+  right: 5mm; 
+  font-size:10pt;
+  background-color: white; 
+  font-weight: bold;
+}
 
 .logo {
   max-width: 100%;
