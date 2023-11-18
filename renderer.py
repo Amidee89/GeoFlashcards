@@ -47,6 +47,7 @@ def load_countries_from_csv(filepath):
                     "name_length": row['Len(name)'],
                     "languages": row['Languages'],
                     "not_independent": row['Non-Independent'],
+                    "chinese_name": row['Chinese'],
                     "flashcard_number": idx-2
                 })
 
@@ -60,7 +61,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     countries = load_countries_from_csv('data.csv')
-    return render_template('flashcard_front.html', countries=countries)
+    return render_template('flashcard_front_and_back.html', countries=countries)
 
 @app.route('/front/')
 def front_flashcards():
@@ -77,6 +78,10 @@ def all_flashcards():
     countries = load_countries_from_csv('data.csv')
     return render_template('flashcard_front_and_back.html', countries=countries)
 
+@app.route('/chinese/')
+def chinese_flashcards():
+    countries = load_countries_from_csv('data.csv')
+    return render_template('flashcard_front_and_back_chinese.html', countries=countries)
 
 @app.route('/flashcard/<int:id>')
 def single_flashcard(id):

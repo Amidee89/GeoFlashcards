@@ -47,6 +47,12 @@ body {
   font-size: 16pt; 
 }
 
+.chinese {
+  line-height: 1pt;
+  font-size: 12pt; 
+}
+
+
 .divider {
   height: 80%; 
   width: 2mm;
@@ -60,10 +66,15 @@ body {
   flex-grow: 1;
   display: flex;
   align-items: center;
-
-
 }
 
+.content-wrapper-chinese {
+  display: flex;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-top: -7px;
+}
 .content {
   flex: 1;
   justify-content: center;

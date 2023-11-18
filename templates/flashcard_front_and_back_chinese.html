@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href={{ url_for('static', filename='styles.css')}}>
+</head>
+<body>
+  {% for country in countries|batch(3) %} <!-- Batch countries in groups of three -->
+    <div class="page">
+        {% for item in country %}
+        <div class="flashcard">
+            <div class="content-wrapper"> 
+            <div class="content left">
+                <!-- Left Content goes here -->
+                <img src="{{ url_for('static', filename='flags_svg/' + item.code + '.svg') }}" alt="flag" class="logo">
+            </div>
+            <div class="divider"></div>
+            <div class="content right">
+                <!-- Right Content goes here -->
+                <img src="{{ url_for('static', filename='maps_svg/' + item.name + '.svg') }}" alt="map" class="map-logo">
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="page">
+        {% for item in country %}
+        <div class="flashcard">
+            <div class="continent-indicator {{ item.continent|replace(' ', '-') }}"></div>
+            {% if item.eu_member == "Yes" %}
+                <div class="eu-indicator">
+                    <img src="/static/flags_svg/eu.svg" alt="EU Flag">
+                </div>
+            {% endif %}
+            {% if item.not_independent == "Yes" %}
+                <div class="eu-indicator">
+                    <img src="/static/flags_svg/exclamation.svg" alt="EU Flag">
+                </div>
+            {% endif %}
+            <div class=number>
+            {{ item.flashcard_number }}
+            </div>
+            <div class="headers">
+              <h1 class="header">{{ item.name }}</h1>
+              <h1 class="chinese">{{ item.chinese_name }}</h1>
+              <h2 class="subheader">{{ item.original_name }}</h2>
+            </div>
+            <div class="content-wrapper-chinese"> 
+                <div class="content left">
+                    <div class="info-text">
+                        <strong>Capital:</strong> {{ item.capital }}<br>
+                        <strong>Climate:</strong> {{ item.climate }}<br>
+                        <strong>Languages:</strong> {{ item.languages }}<br>
+                        <strong>Currency:</strong> {{ item.currency }}<br>
+                            <div class="info-line"><span><strong>Area (Km²):</strong> {{ item.area }} (#{{ item.area_rank }})</span>
+                                <span class="stars">{{ '●' * item.area_rank_stars }}{{ '○' * (5 - item.area_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>Population:</strong> {{ item.population }} (#{{ item.pop_rank }})</span> 
+                                <span class="stars">{{ '●' * item.pop_rank_stars }}{{ '○' * (5 - item.pop_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>Population Growth:</strong> {{ item.pop_growth }} (#{{ item.pop_growth_rank }})</span> 
+                                <span class="stars">{{ '●' * item.pop_growth_rank_stars }}{{ '○' * (5 - item.pop_growth_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>GDP (mln. USD):</strong> {{ item.gdp }} (#{{ item.gdp_rank }})</span> 
+                                <span class="stars">{{ '●' * item.gdp_rank_stars }}{{ '○' * (5 - item.gdp_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>GDP (USD per capita):</strong> {{ item.gdp_per_capita }} (#{{ item.gdp_per_capita_rank }})</span> 
+                                <span class="stars">{{ '●' * item.gdp_per_capita_rank_stars }}{{ '○' * (5 - item.gdp_per_capita_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>Gini Coefficient:</strong> {{ item.gini_index }} (#{{ item.gini_rank }})</span> 
+                                <span class="stars">{{ '●' * item.gini_index_rank_stars }}{{ '○' * (5 - item.gini_index_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>Human Development Index:</strong> {{ item.hdi }} (#{{ item.hdi_rank }})</span> 
+                                <span class="stars">{{ '●' * item.hdi_rank_stars }}{{ '○' * (5 - item.hdi_rank_stars) }}</span>
+                            </div>
+                            <div class="info-line"><span><strong>Press Freedom Index:</strong> {{ item.wpfi }} (#{{ item.wpfi_rank }})</span> 
+                                <span class="stars">{{ '●' * item.wpfi_rank_stars }}{{ '○' * (5 - item.wpfi_rank_stars) }}</span>
+                            </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="content right">
+                    <div class="info-text">
+                        {{ item.general_info }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  {% endfor %}
+</body>
+</html>
