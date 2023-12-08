@@ -83,6 +83,15 @@ body {
   line-height: 13pt;
 }
 
+.flag{
+    margin-top: 5px; /*mistery misalignment */
+    text-align: center; 
+}
+
+.map{
+    margin-top: 5px; /*mistery misalignment */
+    text-align: center; 
+}
 .info-text {
   text-align: justify;
       display: block;
@@ -148,11 +157,11 @@ body {
 
 .logo {
   max-width: 100%;
-  max-height: 80%; 
+  max-height: 70mm; 
   border: 1mm solid black;
   object-fit: contain; 
+  text-align: center;
   margin-left: -0.9mm; /* Mistery misalignment*/ 
-  margin-top: -2.9mm; /* Mistery misalignment*/ 
 }
 
 .map-logo {
@@ -162,8 +171,8 @@ body {
   min-width: 100%;
   border-radius: 4mm; 
   object-fit: cover;
+  text-align: center;
   margin-left: -0.9mm; /* Mistery misalignment*/ 
-  margin-top: -2.9mm; /* Mistery misalignment*/ 
 }
 .page {
   width: 210mm; /* width of A4 */
