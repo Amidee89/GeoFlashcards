@@ -75,9 +75,12 @@ body {
   align-items: center;
   margin-top: -7px;
 }
+
 .content {
   flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
   padding: 5mm; 
   font-size: 10pt;
   line-height: 13pt;
@@ -151,19 +154,17 @@ body {
   max-height: 80%; 
   border: 1mm solid black;
   object-fit: contain; 
-  margin-left: -0.9mm; /* Mistery misalignment*/ 
-  margin-top: -2.9mm; /* Mistery misalignment*/ 
+  display: block;
 }
 
 .map-logo {
+  display: block;
   border: 1mm solid black;
   max-width: 100%;
   max-height: 100%; 
   min-width: 100%;
   border-radius: 4mm; 
   object-fit: cover;
-  margin-left: -0.9mm; /* Mistery misalignment*/ 
-  margin-top: -2.9mm; /* Mistery misalignment*/ 
 }
 .page {
   width: 210mm; /* width of A4 */
