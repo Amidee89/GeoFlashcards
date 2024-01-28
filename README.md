@@ -7,6 +7,7 @@
  Run python renderer.py and go to http://127.0.0.1:5000/back/ or http://127.0.0.1:5000/front or http://127.0.0.1:5000/complete to re-render with the browser. 
  Only Chrome manages to cut off properly the pages, and you have to print even pages only because it adds a white page after the break (the white page also makes macOS preview render random gray stuff in the flashcards).
  Chrome also has different margins for the first page for some reason, so I added 3 extra lines to the CSV so all pages come out the same.
+ Chrome will *also* put different margins on the sides of the flashcards, so you have to print with custom margin and move the right margin left by 2.5mm.
  
  Very very aggressive margins for printing on A4, you might need to scale back but be careful to do so as it might screw up horizontal alignment between front and back. 
  

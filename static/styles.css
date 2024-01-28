@@ -86,6 +86,15 @@ body {
   line-height: 13pt;
 }
 
+.flag{
+    margin-top: 5px; /*mistery misalignment */
+    text-align: center; 
+}
+
+.map{
+    margin-top: 5px; /*mistery misalignment */
+    text-align: center; 
+}
 .info-text {
   text-align: justify;
       display: block;
@@ -156,7 +165,7 @@ body {
 
 .logo {
   max-width: 100%;
-  max-height: 80%; 
+  max-height: 70mm; 
   border: 1mm solid black;
   object-fit: contain; 
   display: block;
