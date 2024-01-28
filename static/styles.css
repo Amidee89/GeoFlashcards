@@ -89,6 +89,7 @@ body {
 .info-text {
   text-align: justify;
       display: block;
+  flex-grow: 1;
 }
 
 .info-line {
