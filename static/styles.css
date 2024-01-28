@@ -98,6 +98,10 @@ body {
     width: 100%;
 }
 
+.info-line .stars {
+  width: 40px;
+}
+
 .info-text .info-line:nth-child(odd) {
     background-color: #f2f2f2;
 }
