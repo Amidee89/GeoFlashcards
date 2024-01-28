@@ -14,7 +14,7 @@
  Data available here:
  https://docs.google.com/spreadsheets/d/1VADXC_0FcfDw9iflfB6tkSPC86Nlv_Qa7_EJE5hI5ps/edit?usp=sharing
  
- Flags data from flagpedia.net and maps from Wikimedia. Watch out – the entire repo is about 4.5 gigabytes because it includes a *lot* of SVGs, even for territories that are not included in the pdfs.
+ Flags data from flagpedia.net and maps from Wikimedia. Watch out – the entire repo is about 1.5 gigabytes because it includes a *lot* of SVGs, even for territories that are not included in the pdfs. This means, if you are looking for a place to download all 16:9 Wikipedia maps, you can do it through this repo.
  If you just want to download the PDFs, just head to the releases.
 
 All 195 countries from [this list](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population), with the following data:
