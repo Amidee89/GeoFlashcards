@@ -48,7 +48,7 @@ def load_countries_from_csv(filepath):
                     "languages": row['Languages'],
                     "not_independent": row['Non-Independent'],
                     "chinese_name": row['Chinese'],
-                    "flashcard_number": idx-2
+                    "flashcard_number": idx+1
                 })
 
             else:
