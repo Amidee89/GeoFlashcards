@@ -191,8 +191,38 @@ body {
   margin-bottom: 10mm;
 }
 @media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    page-break-after: always;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .flashcard {
-    width: 190mm !important; 
+    width: 190mm !important;
+    margin: .5mm 0 !important;
+    flex-shrink: 0;
   }
 }
 
