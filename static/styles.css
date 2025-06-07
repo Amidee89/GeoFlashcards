@@ -15,7 +15,6 @@ body {
   height: 90mm;
   margin: 0 auto;
   border: 2mm solid black;
-  border-radius: 12px;
   background-color: #ffffff;
   display: flex;
   break-inside: avoid; 
@@ -24,7 +23,6 @@ body {
   margin-bottom: .5mm;
   z-index: 999999;
   flex-direction: column;
-
 }
 
 
